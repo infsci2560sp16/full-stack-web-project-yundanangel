@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <script src="js/js.js"></script>
+</head>
+<body>
+  <div class="header">
+  <div class="header-logo"></div>
+  <div class="header-nav">
+    <form id="search" method="post" action="">
+    <input type="text" placeholder="Jobs" />
+    <input type="text" placeholder="Location"/>
+      <button value="search">search</button>
+   </form>
+
+  </div>
+  <div class="header-clogin"><button id="clogin" value="search" >Company</button></div>
+  <div class="header-ulogin"><a href="login.html"><button id="ulogin" value="search">Login</button></a></div>
+  <div class="header-nav1">
+    <table>
+      <td><a href="">Personal</a></td>
+      <td><a href="">Interns</a></td>
+      <td><a href="">Resource</a></td>
+    </table>
+  </div>
+</div>
+<center>Already have an account? <a href="login.html">Log in!</a></center>
+  <div class="Register">
+    <div class="Registerpanel">
+      <form id="register_info" method="get" action="Main.html">
+      <center><p>Register with Email</p></center>
+      <table>
+        <tr>
+          <td class="Index">Email</td>
+          <td class="Input"><input id="email" type="text"/></td>
+          <td class="Index">Zip code</td>
+          <td class="Input"><input id="zipcode" type="text"/></td>
+        </tr>
+        <tr>
+          <td class="Index">First name</td>
+          <td class="Input"><input id="First_name" type="text"/></td>
+          <td class="Index">Last name</td>
+          <td class="Input"><input id="Last_name" type="text"/></td>
+        </tr>
+        <tr>
+          <td class="Index">Password</td>
+          <td class="Input"><input id="password" type="Password"/></td>
+          <td class="Index">Password again</td>
+          <td class="Input"><input id="password0" type="Password"/></td>
+        </tr>
+        <tr>
+          <td class="Index">Education level</td>
+          <td class="Input"><select id="elevel" type="text"/><option value="1">Undergraduate</option><option value="2">Graduate</option><option value="3">Phd</option></td>
+          <td class="Index">Country</td>
+          <td class="Input"><select id="Country" type="text"/><option value="1">US</option><option value="2">UK</option><option value="3">Russia</option></td>
+        </tr>
+      </table>
+      <button type="button" onclick="checkRegister()">Register</button><br>
+    </form>
+    </div>
+  </div>
+  <div>
+  </div>
+  <div class="footer">
+    @University of Pittsburgh <a href="About_us.html">About us</a>
+  </div>
+</body>
+</html>
