@@ -10,28 +10,30 @@
   <div class="header">
   <div class="header-logo"></div>
   <div class="header-nav">
-    <form id="search" method="post" action="">
+    <form id="search" method="post" action="Main.html">
     <input type="text" placeholder="Jobs" />
     <input type="text" placeholder="Location"/>
-      <button value="search">search</button>
+    <button value="search">search</button>
    </form>
 
   </div>
-  <div class="header-clogin"><button id="clogin" value="search" >Company</button></div>
-  <div class="header-ulogin"><a href="login.html"><button id="ulogin" value="search">Login</button></a></div>
+  <div class="header-clogin"><button onclick="location.href='Main.html';">Company</button></div>
+  <div class="header-ulogin"><button onclick="location.href='login.html';">Login</button></div>
   <div class="header-nav1">
     <table>
+      <tr>
       <td><a href="">Personal</a></td>
       <td><a href="">Interns</a></td>
       <td><a href="">Resource</a></td>
+    </tr>
     </table>
   </div>
 </div>
-<center>Already have an account? <a href="login.html">Log in!</a></center>
+Already have an account? <a href="login.html">Log in!</a>
   <div class="Register">
     <div class="Registerpanel">
       <form id="register_info" method="get" action="Main.html">
-      <center><p>Register with Email</p></center>
+      <p>Register with Email</p>
       <table>
         <tr>
           <td class="Index">Email</td>
@@ -53,9 +55,9 @@
         </tr>
         <tr>
           <td class="Index">Education level</td>
-          <td class="Input"><select id="elevel" type="text"/><option value="1">Undergraduate</option><option value="2">Graduate</option><option value="3">Phd</option></td>
+          <td class="Input"><select id="elevel" ><option value="1">Undergraduate</option><option value="2">Graduate</option><option value="3">Phd</option></select></td>
           <td class="Index">Country</td>
-          <td class="Input"><select id="Country" type="text"/><option value="1">US</option><option value="2">UK</option><option value="3">Russia</option></td>
+          <td class="Input"><select id="Country" ><option value="1">US</option><option value="2">UK</option><option value="3">Russia</option></select></td>
         </tr>
       </table>
       <button type="button" onclick="checkRegister()">Register</button><br>

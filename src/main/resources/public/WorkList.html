@@ -9,19 +9,22 @@
   <div class="header">
   <div class="header-logo"></div>
   <div class="header-nav">
-  <form id="search" method="post" action="">
-  <input type="text" placeholder="Jobs" />
-  <input type="text" placeholder="Location"/>
-   <button value="search">search</button>
- </form>
+    <form id="search" method="post" action="Main.html">
+    <input type="text" placeholder="Jobs" />
+    <input type="text" placeholder="Location"/>
+    <button value="search">search</button>
+   </form>
+
   </div>
-  <div class="header-clogin"><a href=""><button id="clogin" value="search" >Company</button></a></div>
-  <div class="header-ulogin"><a href="login.html"><button id="ulogin" value="search" >Login</button></a></div>
+  <div class="header-clogin"><button onclick="location.href='Main.html';">Company</button></div>
+  <div class="header-ulogin"><button onclick="location.href='login.html';">Login</button></div>
   <div class="header-nav1">
     <table>
+      <tr>
       <td><a href="">Personal</a></td>
       <td><a href="">Interns</a></td>
       <td><a href="">Resource</a></td>
+    </tr>
     </table>
   </div>
 </div>

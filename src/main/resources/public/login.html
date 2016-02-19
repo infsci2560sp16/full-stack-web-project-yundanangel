@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+    <script src="js/js.js"></script>
 </head>
 <body>
   <div class="header">
@@ -28,12 +29,29 @@
     </table>
   </div>
 </div>
-  <div class="About_us">
-    <div class="About_us_panel">
-  <img src="image/About_us_face.gif" alt="No picture"/><br>
-    <q>  This website is designed by Bolun Zhang from Information Science School at University of Pittsburgh. Someone who loves sports but don't like doing them and loves cyber games but s**k at playing them. </q>
+Don't have an account? <a href="Register.html">sign up!</a>
+  <div class="login">
+    <div class="loginpanel">
+      <form id="login_info" method="post" action="Main.html">
+      <p>Log in with Email</p>
+      <table>
+        <tr>
+          <td class="Index">Email</td>
+          <td class="Input"><input id="email" type="text"/></td>
+        </tr>
+        <tr>
+          <td class="Index">Password</td>
+          <td class="Input"><input id="password" type="password"/></td>
+        </tr>
+      </table>
+      <button type="button" onclick="checklogin();">login</button>
+      <br>
+      <a href="no">Forget your password?</a>
+      </form>
+    </div>
   </div>
-</div>
+  <div>
+  </div>
   <div class="footer">
     @University of Pittsburgh <a href="About_us.html">About us</a>
   </div>
