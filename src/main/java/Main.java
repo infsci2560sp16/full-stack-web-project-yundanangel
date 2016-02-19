@@ -21,7 +21,7 @@ public class Main {
 
     port(Integer.valueOf(System.getenv("PORT")));
     staticFileLocation("/public");
-
+/*
       get("/hello", (req, res) -> {
           RelativisticModel.select();
           
@@ -37,6 +37,7 @@ public class Main {
 
             return new ModelAndView(attributes, "index.ftl");
         }, new FreeMarkerEngine());
+ */
 
       get("/db", (req, res) -> {
           Connection connection = null;
