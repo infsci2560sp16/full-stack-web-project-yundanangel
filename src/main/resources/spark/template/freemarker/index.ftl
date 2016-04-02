@@ -1,56 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <#include "header.ftl">
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
 </head>
-
 <body>
-
-  <#include "nav.ftl">
-
-<div class="jumbotron text-center">
-  <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="/lang-logo.png">
+  <div class="header">
+  <div class="header-logo"><a href="index.html"><img src="image/logo.png" alt="No picture"></a></div>
+  <div class="header-nav">
+    <form id="search" method="post" action="index.html">
+    <input type="text" placeholder="Jobs" />
+    <input type="text" placeholder="Location"/>
+    <button value="search">search</button>
+   </form>
+</div>
+  <div class="header-clogin"><button onclick="location.href='index.html';">Company</button></div>
+  <div class="header-ulogin"><button onclick="location.href='login.html';">Login</button></div>
+  	<div class="header-date"><button onclick="location.href='index.html';"><#list dayOfWeek as sect><#if sect_index == 1>M:${sect}
+  	<#elseif sect_index==2>D:${sect}<br/></#if>
+  	</#list><#list timeOfDay as sict>
+  	<#if sict_index==0>
+  	H: ${sict}
+  	</#if>
+  	</#list></button></div>
+  <div class="header-nav1">
+    <table>
+      <tr>
+      <td><a href="">Personal</a></td>
+      <td><a href="WorkList.html">Interns</a></td>
+      <td><a href="">Resource</a></td>
+    </tr>
+    </table>
+  </div>
+</div>
+  <div class="MainMiddle">
+  <div class="MainMiddleLeft">
+    <div class="transbox">
+      <a href=""><p>Get Started</p>
+      <img src="image/Hat.jpeg" alt="No picture"/>
+        <br><p>Upload Information</p>
     </a>
-    <h1>Getting Started with Java on Heroku</h1>
-    <p>This is a sample Java application deployed to Heroku. It's a reasonably simple app - but a good foundation for understanding how to get the most out of the Heroku platform.</p>
-    <a type="button" class="btn btn-lg btn-default" href="https://devcenter.heroku.com/articles/getting-started-with-java"><span class="glyphicon glyphicon-flash"></span> Getting Started with Java</a>
-    <a type="button" class="btn btn-lg btn-primary" href="https://github.com/heroku/java-getting-started"><span class="glyphicon glyphicon-download"></span> Source on GitHub</a>
+    </div>
+  </div>
+  <div class="MainMiddleRight">
+    <div class="transbox">
+      <a href=""><p>Find an Employee</p>
+      <img src="image/Employer.jpg" alt="No picture"/>
+      <br><p>Post jobs</p>
+    </a>
+    </div>
+  </div>
+  </div>
+  <div class="MainDown">
+  <div class="MainDownLeft">
+    <div class="StarComp">
+      <div class="upper">
+            Featured Company
+      </div>
+      <div class="middle">
+        <br><br>
+            <img src="image/Cop01.png" alt="No picture"/><br>
+            best company so far
+      </div>
+      <div class="lower">
+            go check
+      </div>
+    </div>
+    <div class="StarComp">
+      <div class="upper">
+            Featured Company
+      </div>
+      <div class="middle">
+        <br><br>
+            <img src="image/Cop02.png" alt="No picture"/><br>
+            best company so far
+      </div>
+      <div class="lower">
+            go check
+      </div>
+    </div>
+    <div class="StarComp">
+      <div class="upper">
+            Featured Company
+      </div>
+      <div class="middle">
+        <br><br>
+            <img src="image/Cop03.png" alt="No picture"/><br>
+            best company so far
+      </div>
+      <div class="lower">
+            go check
+      </div>
+    </div>
+  </div>
+  <div class="MainDownRight">
+    <div class="StarComp">
+      <div class="upper">
+            Featured article
+      </div>
+      <div class="middle">
+        <br><br>
+            <img src="image/Cop01.png" alt="No picture"/><br>
+            .......
+      </div>
+      <div class="lower">
+            Full article
+      </div>
+    </div>
+    <div class="StarComp">
+      <div class="upper">
+            Featured article
+      </div>
+      <div class="middle">
+        <br><br>
+            <img src="image/Cop02.png" alt="No picture"/><br>
+            .......
+      </div>
+      <div class="lower">
+            Full article
+      </div>
+    </div>
+    <div class="StarComp">
+      <div class="upper">
+            Featured article
+      </div>
+      <div class="middle">
+        <br><br>
+            <img src="image/Cop03.png" alt="No picture"/><br>
+            .......
+      </div>
+      <div class="lower">
+            Full article
+      </div>
+    </div>
   </div>
 </div>
-<div class="container">
-  <div class="alert alert-info text-center" role="alert">
-    To deploy your own copy, and learn the fundamentals of the Heroku platform, head over to the <a href="https://devcenter.heroku.com/articles/getting-started-with-java" class="alert-link">Getting Started with Java on Heroku</a> tutorial.
+  <div class="footer">
+    @University of Pittsburgh <a href="About_us.html">About us</a>
   </div>
-  <hr>
-  <div class="row">
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-info-sign"></span> How this sample app works</h3>
-      <ul>
-        <li>This app was deployed to Heroku, either using Git or by using <a href="https://github.com/heroku/java-getting-started">Heroku Button</a> on the repository.</li>
-
-        <li>When Heroku received the source code, it grabbed all the dependencies in the <a href="https://github.com/heroku/java-getting-started/blob/master/pom.xml">pom.xml</a>.</li>
-        <li>The platform then spins up a dyno, a lightweight container that provides an isolated environment in which the slug can be mounted and executed.</li>
-        <li>You can scale your app, manage it, and deploy over <a href="https://addons.heroku.com/">150 add-on services</a>, from the Dashboard or CLI.</li>
-        <li>Check out the <a href="https://devcenter.heroku.com/articles/getting-started-with-java">Getting Started</a> guide to learn more!</li>
-      </ul>
-    </div>
-    <div class="col-md-6">
-      <h3><span class="glyphicon glyphicon-link"></span> Helpful Links</h3>
-      <ul>
-        <li><a href="https://www.heroku.com/home">Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/">Heroku Dev Center</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/getting-started-with-java">Getting Started with Java on Heroku</a></li>
-        <li><a href="https://devcenter.heroku.com/articles/deploying-java">Deploying Java Apps on Heroku</a></li>
-      </ul>
-    </div>
-  </div> <!-- row -->
-   <div class="alert alert-info text-center" role="alert">
-    Please do work through the Getting Started guide, even if you do know how to build such an application.  The guide covers the basics of working with Heroku, and will familiarize you with all the concepts you need in order to build and deploy your own apps.
+  <div>
   </div>
-</div>
-
-
 </body>
 </html>
+

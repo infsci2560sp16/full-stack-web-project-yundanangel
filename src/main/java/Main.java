@@ -1,6 +1,8 @@
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Map;
 
 import java.net.URI;
@@ -12,6 +14,7 @@ import spark.ModelAndView;
 import static spark.Spark.get;
 
 import com.heroku.sdk.jdbc.DatabaseUrl;
+import routes.*;
 
 //import static javax.measure.unit.SI.KILOGRAM;
 //import javax.measure.quantity.Mass;
@@ -22,9 +25,9 @@ public class Main {
     
     public static void main(String[] args) {
         
-        port(Integer.valueOf(System.getenv("PORT")));
+        //port(Integer.valueOf(System.getenv("PORT")));
         staticFileLocation("/public");
-        
+        Route1 r = new Route1();
         //      get("/hello", (req, res) -> {
         //          RelativisticModel.select();
         //          Amount<Mass> m = Amount.valueOf("12 GeV").to(KILOGRAM);
@@ -72,7 +75,15 @@ public class Main {
                 if (connection != null) try{connection.close();} catch(SQLException e){}
             }
         }, new FreeMarkerEngine());
+       /*get("/assets", (req, res) -> {
+            Map<String, Object> attributes = new HashMap<>();
+            SimpleDateFormat formatter = new SimpleDateFormat("EEEE");
+            String dayOfWeek = formatter.format(new Date());
+            attributes.put("title", "Wicked Assets");
+            attributes.put("dayOfWeek", dayOfWeek);
+            return new ModelAndView(attributes, "index.ftl");
+          }, new FreeMarkerEngine());*/
+    	}
         
     }
-    
-}
+ 

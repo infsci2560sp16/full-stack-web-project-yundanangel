@@ -57,6 +57,18 @@ a{
   margin-right:10px;
   float:right;
 }
+.header-date{
+  top:10px;
+  position:relative;
+  -moz-border-radius:50%;
+  -webkit-border-radius:50%;
+  border-radius:50%;
+  background-color: inherit;
+  width: 140px;
+  height:70px;
+  margin-right:10px;
+  float:right;
+}
 .header-ulogin{
   top:10px;
   position:relative;
