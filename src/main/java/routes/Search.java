@@ -18,6 +18,8 @@ public class Search {
 
 			Map<String,Object> Job=new HashMap<>();
 			Job.put("Job",req.queryParams("jobs"));
+			Job.put("Specialization","Data");
+			Job.put("title","Intern");
 			Job.put("Employer", "Microsoft");
 			Job.put("City", "New York City");
 			Job.put("State", "New York");
@@ -31,7 +33,9 @@ public class Search {
 			String xml =    "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
                     "<Job>" +
                         "<Employer>"+Job.get("Employer")+"</Employer>" +
-                        "<postingtime>1 month ago</postingTime>" +
+                        "<postingtime>1 month ago</postingtime>" +
+                        "<title>intern</title>" +
+                        "<Specialization>1 month ago</Specializaion>" +
                         "<City>"+Job.get("City")+"</City>" +
                         "<country>"+Job.get("Country")+"</country>" +
                         "<Zipcode>"+Job.get("Zipcode")+"</Zipcode>" +
@@ -41,7 +45,7 @@ public class Search {
                         "<wage>"+Job.get("wage")+"</wage>" +
                         "<sponsor>"+Job.get("sponsor")+"</sponsor>" +
                     "</Job>";
-			res.type("content/xml");
+			res.type("text/xml");
 			System.out.println("search successfully");
 			return xml;
 		});

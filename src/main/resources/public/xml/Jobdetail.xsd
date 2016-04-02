@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="Jobdetail">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="Specialization" type="xs:string"/>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="zipcode" type="xs:Int"/>
+      <xs:element name="Country" type="xs:string"/>
+      <xs:element name="State" type="xs:string"/>
+      <xs:element name="City" type="xs:string"/>
+      <xs:element name="startdate" type="xs:string"/>
+      <xs:element name="enddate" type="xs:string"/>
+      <xs:element name="type" type="xs:string"/>
+      <xs:element name="wage" type="xs:double"/>
+      <xs:element name="sponsor" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

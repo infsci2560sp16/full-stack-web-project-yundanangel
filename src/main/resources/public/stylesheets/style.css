@@ -42,7 +42,7 @@ a{
   color: #F0F8FF;
   width: 60%;
   height:50px;
-  margin-left:101px;
+  margin-left:50px;
   float:left;
 }
 .header-clogin{
@@ -64,9 +64,9 @@ a{
   -webkit-border-radius:50%;
   border-radius:50%;
   background-color: inherit;
-  width: 140px;
+  width: 100px;
   height:70px;
-  margin-right:10px;
+  margin-right:0px;
   float:right;
 }
 .header-ulogin{

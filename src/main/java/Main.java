@@ -28,6 +28,10 @@ public class Main {
         //port(Integer.valueOf(System.getenv("PORT")));
         staticFileLocation("/public");
         Route1 r = new Route1();
+        P2 p=new P2();
+        Search s=new Search();
+        SignIn s2=new SignIn();
+        SignUp s3=new SignUp();
         //      get("/hello", (req, res) -> {
         //          RelativisticModel.select();
         //          Amount<Mass> m = Amount.valueOf("12 GeV").to(KILOGRAM);

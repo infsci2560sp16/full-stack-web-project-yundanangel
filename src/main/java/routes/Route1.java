@@ -30,6 +30,14 @@ public class Route1 {
                 attributes.put("title", "Wicked Assets");
                 attributes.put("dayOfWeek", dayOfWeek);
                 attributes.put("timeOfDay", timeOfDay);
+                String username;
+                if(req.queryParams("username")!=null){
+    				username=req.queryParams("username");
+    			}
+    			else{
+    				username=" ";
+    			}
+                attributes.put("username", username);
                 return new ModelAndView(attributes, "index.ftl");
               }, new FreeMarkerEngine());
     }

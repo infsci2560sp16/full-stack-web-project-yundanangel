@@ -4,26 +4,21 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/js.js"></script>
 </head>
 <body>
   <div class="header">
   <div class="header-logo"><a href="index.html"><img src="image/logo.png" alt="No picture"></a></div>
   <div class="header-nav">
-    <form id="search" method="post" action="index.html">
-    <input type="text" placeholder="Jobs" />
-    <input type="text" placeholder="Location"/>
-    <button value="search">search</button>
+    <form id="search" method="post" action="/index">
+    <input type="text" id="jobs" placeholder="Jobs" />
+    <input type="text" id="location" placeholder="Location"/>
+    <button value="search" onclick="search()">search</button>
    </form>
 </div>
   <div class="header-clogin"><button onclick="location.href='index.html';">Company</button></div>
   <div class="header-ulogin"><button onclick="location.href='login.html';">Login</button></div>
-  	<div class="header-date"><button onclick="location.href='index.html';"><#list dayOfWeek as sect><#if sect_index == 1>M:${sect}
-  	<#elseif sect_index==2>D:${sect}<br/></#if>
-  	</#list><#list timeOfDay as sict>
-  	<#if sict_index==0>
-  	H: ${sict}
-  	</#if>
-  	</#list></button></div>
   <div class="header-nav1">
     <table>
       <tr>
@@ -33,6 +28,13 @@
     </tr>
     </table>
   </div>
+  <div class="header-date"><button onclick="location.href='index.html';"><#list dayOfWeek as sect><#if sect_index == 1>M:${sect}
+  	<#elseif sect_index==2>D:${sect}<br/></#if>
+  	</#list><#list timeOfDay as sict>
+  	<#if sict_index==0>
+  	H: ${sict}
+  	</#if>
+  	</#list></button></div>
 </div>
   <div class="MainMiddle">
   <div class="MainMiddleLeft">

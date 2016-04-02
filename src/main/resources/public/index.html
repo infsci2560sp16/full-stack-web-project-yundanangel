@@ -4,14 +4,16 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="js/js.js"></script>
 </head>
 <body>
   <div class="header">
   <div class="header-logo"><a href="index.html"><img src="image/logo.png" alt="No picture"></a></div>
   <div class="header-nav">
     <form id="search" method="post" action="index.html">
-    <input type="text" placeholder="Jobs" />
-    <input type="text" placeholder="Location"/>
+    <input type="text" id="jobs" placeholder="Jobs" />
+    <input type="text" id="location" placeholder="Location"/>
     <button value="search" onclick="search();">search</button>
    </form>
 </div>
