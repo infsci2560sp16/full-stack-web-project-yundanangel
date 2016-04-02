@@ -23,7 +23,7 @@ public class Route1 {
     private void setupRoutes() {
             get("/index", (req, res) -> {
                 Map<String, Object> attributes = new HashMap<>();
-                DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+                /*DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
                 Date date = new Date();
                 String[] dayOfWeek = dateFormat.format(date).split(" ",-1)[0].split("/",-1);
                 String[] timeOfDay = dateFormat.format(date).split(" ",-1)[1].split(":",-1);
@@ -37,7 +37,7 @@ public class Route1 {
     			else{
     				username=" ";
     			}
-                attributes.put("username", username);
+                attributes.put("username", username);*/
                 return new ModelAndView(attributes, "index.ftl");
               }, new FreeMarkerEngine());
     }
