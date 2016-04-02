@@ -13,7 +13,7 @@ public class Search {
 	}
 	public void search(){
 
-		get("/search",(req,res)->{
+		/*get("/search",(req,res)->{
 
 
 			Map<String,Object> Job=new HashMap<>();
@@ -48,7 +48,7 @@ public class Search {
 			res.type("text/xml");
 			System.out.println("search successfully");
 			return xml;
-		});
+		});*/
 
 	}
 }
