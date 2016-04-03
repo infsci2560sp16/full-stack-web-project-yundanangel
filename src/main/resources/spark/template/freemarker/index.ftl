@@ -11,10 +11,10 @@
   <div class="header">
   <div class="header-logo"><a href="index.html"><img src="image/logo.png" alt="No picture"></a></div>
   <div class="header-nav">
-    <form id="search" method="post" action="/index">
+    <form id="search" method="post" action="">
     <input type="text" id="jobs" placeholder="Jobs" />
     <input type="text" id="location" placeholder="Location"/>
-    <button value="search" onclick="search()">search</button>
+    <button value="search" type="button" onclick="search()">search</button>
    </form>
 </div>
   <div class="header-clogin"><button onclick="location.href='index.html';">Company</button></div>

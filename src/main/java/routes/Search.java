@@ -31,11 +31,11 @@ public class Search {
 			Job.put("wage","200");
 			Job.put("sponsor", "Yes");
 			String xml =    "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" +
-                    "<Job>" +
+                    "<Job>" +Job.get("Job")+
                         "<Employer>"+Job.get("Employer")+"</Employer>" +
                         "<postingtime>1 month ago</postingtime>" +
                         "<title>intern</title>" +
-                        "<Specialization>1 month ago</Specializaion>" +
+                        "<Specialization>1 month ago</Specialization>" +
                         "<City>"+Job.get("City")+"</City>" +
                         "<country>"+Job.get("Country")+"</country>" +
                         "<Zipcode>"+Job.get("Zipcode")+"</Zipcode>" +

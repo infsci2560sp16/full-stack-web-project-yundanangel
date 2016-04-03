@@ -10,7 +10,7 @@
   else 
 	  $.get("/signin",{"email":email,"password":password},function(data){
 			alert("Login successful");
-			window.location.href="/index";
+			window.location.href="/signin?email="+email+"&password="+password;
 		  });
 }
 
@@ -42,9 +42,9 @@ function checkRegister(){
   if(zipcode.length!=5){
     message=message+"Zip code in wrong format\n";
   }
-  if(!isNaN(zipcode)){
+  /*if(!isNaN(zipcode)){
     message=message+"Zip code need to be all numeric";
-  }
+  }*/
   if(message.length>=1){
     alert(message);
   }
@@ -59,7 +59,7 @@ function checkRegister(){
   	//alert("so far so good 3");
   	$.post("/SignUp",user_info,function(data){
   		alert("Sign up successfully!");
-		window.location.href="/index";
+		window.location.href="/SignUp";
 	  });
   	//alert("so far so good 4");
   }
@@ -68,15 +68,14 @@ function checkRegister(){
   
   
  function search(){
-  var keywords=document.getElementById("keywords").value;
+  var jobs=document.getElementById("jobs").value;
   var location=document.getElementById("location").value;
   var searchterm={
-		  "keywords":keywords,
+		  "jobs":jobs,
 		  "location":location
   };
   $.get("/search",searchterm,function(data){
-    console.log(data);
-    var e=data;
-    alert(e);
+	  alert("Sign up successfully!");
+	window.location.href="/search?jobs="+jobs;
   });
 }
