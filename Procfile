@@ -1,1 +1,1 @@
-web: gunicorn app:app --log-file=-
+web:    java -cp target/classes:target/dependency/* Main
