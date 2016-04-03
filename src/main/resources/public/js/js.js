@@ -42,9 +42,9 @@ function checkRegister(){
   if(zipcode.length!=5){
     message=message+"Zip code in wrong format\n";
   }
-  /*if(!isNaN(zipcode)){
+  if(!isNaN(zipcode)){
     message=message+"Zip code need to be all numeric";
-  }*/
+  }
   if(message.length>=1){
     alert(message);
   }
@@ -56,13 +56,12 @@ function checkRegister(){
 		    "password":password,
 		    "zipcode":zipcode
 		  };
-  	alert("so far so good 3");
-  	$.post("/SignUp",{"First_name":First_name,"Last_name":Last_name,"email":email,"password":password,"zipcode":zipcode
-	  },function(data){
+  	//alert("so far so good 3");
+  	$.post("/SignUp",user_info,function(data){
   		alert("Sign up successfully!");
 		window.location.href="/index";
 	  });
-  	alert("so far so good 4");
+  	//alert("so far so good 4");
   }
 }
 
